@@ -357,7 +357,18 @@ function CanvasContent({
     const [selectedNode, setSelectedNode] = React.useState<{ id: string; label: string; type?: string } | null>(null);
 
     const onConnect = useCallback(
-        (params: Connection) => setEdges((eds) => addEdge({ ...params, type: 'smoothstep' as const, markerEnd: { type: MarkerType.ArrowClosed } }, eds)),
+        (params: Connection) => {
+            const newEdge: Edge = {
+                id: `${params.source}-${params.target}`,
+                source: params.source!,
+                target: params.target!,
+                sourceHandle: params.sourceHandle,
+                targetHandle: params.targetHandle,
+                type: 'smoothstep',
+                markerEnd: { type: MarkerType.ArrowClosed },
+            };
+            setEdges((eds) => addEdge(newEdge, eds));
+        },
         [setEdges]
     );
 

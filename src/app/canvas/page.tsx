@@ -308,7 +308,7 @@ const initialNodes = [
 ];
 
 // Initial Edges - All using 90° angled connectors (straightStep or verticalDrop)
-const initialEdges = [
+const initialEdges: Edge[] = [
     // Layer 1 → Layer 2: Idea to Personas, Market, Tech (all 90° angled)
     { id: "e1", source: "root", target: "child-1", type: "straightStep", markerEnd: { type: MarkerType.ArrowClosed }, animated: true },
     { id: "e2", source: "root", target: "child-2", type: "straightStep", markerEnd: { type: MarkerType.ArrowClosed }, animated: true },

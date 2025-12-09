@@ -20,15 +20,6 @@ export function ScenariosSection({
     onUpdateSecondary,
 }: ScenariosSectionProps) {
     const PersonaScenarios = ({ persona, isPrimary, onUpdate }: { persona: Persona; isPrimary: boolean; onUpdate: (updates: Partial<Persona>) => void }) => {
-        const updateScenario = (field: "typicalDay" | "success" | "failure", value: string) => {
-            onUpdate({
-                scenarios: {
-                    ...persona.scenarios,
-                    [field]: String(value ?? ""),
-                },
-            });
-        };
-
         return (
             <div className={`flex-1 min-w-0 p-4 rounded-lg border ${isPrimary
                 ? 'bg-orange-50/50 dark:bg-orange-950/20 border-orange-200 dark:border-orange-900'
@@ -45,13 +36,9 @@ export function ScenariosSection({
                             <Calendar className="w-4 h-4 text-orange-500" />
                             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">A Day in the Life</span>
                         </div>
-                        <EditableField
-                            value={persona.scenarios?.typicalDay || ""}
-                            onSave={(value) => updateScenario("typicalDay", value)}
-                            multiline
-                            placeholder="Describe a typical day for this persona and how they would interact with your product..."
-                            className="text-sm"
-                        />
+                        <p className="text-sm text-zinc-700 dark:text-zinc-300">
+                            {persona.scenarios?.typicalDay || "Describe a typical day for this persona and how they would interact with your product..."}
+                        </p>
                     </div>
 
                     {/* Success Scenario */}
@@ -60,13 +47,9 @@ export function ScenariosSection({
                             <CheckCircle className="w-4 h-4 text-emerald-500" />
                             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Success Story</span>
                         </div>
-                        <EditableField
-                            value={persona.scenarios?.success || ""}
-                            onSave={(value) => updateScenario("success", value)}
-                            multiline
-                            placeholder="Describe what success looks like for this persona..."
-                            className="text-sm"
-                        />
+                        <p className="text-sm text-zinc-700 dark:text-zinc-300">
+                            {persona.scenarios?.success || "Describe what success looks like for this persona..."}
+                        </p>
                     </div>
 
                     {/* Failure Scenario */}
@@ -75,13 +58,9 @@ export function ScenariosSection({
                             <XCircle className="w-4 h-4 text-red-500" />
                             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Failure Story</span>
                         </div>
-                        <EditableField
-                            value={persona.scenarios?.failure || ""}
-                            onSave={(value) => updateScenario("failure", value)}
-                            multiline
-                            placeholder="Describe what happens when things go wrong..."
-                            className="text-sm"
-                        />
+                        <p className="text-sm text-zinc-700 dark:text-zinc-300">
+                            {persona.scenarios?.failure || "Describe what happens when things go wrong..."}
+                        </p>
                     </div>
                 </div>
             </div>

@@ -70,6 +70,8 @@ export function EditSheet({
       triggers: "Triggers",
       constraints: "Constraints",
       scenarios: "Scenarios",
+      goalPainSolutions: "Goal ↔ Pain ↔ Solution",
+      skills: "Skills",
     };
     return titles[sectionKey];
   };
@@ -78,6 +80,30 @@ export function EditSheet({
 
   const renderSectionEditor = () => {
     switch (sectionKey) {
+      case "goalPainSolutions":
+        return (
+          <div className="space-y-4 text-sm text-slate-600">
+            <p className="text-slate-500">
+              Goal–Pain–Solution items are generated from persona data. Editing UI is not yet implemented in this sheet.
+            </p>
+            <p className="text-slate-500">
+              You can regenerate this section, or edit the underlying goals and pain points to change the generated outputs.
+            </p>
+          </div>
+        );
+
+      case "skills":
+        return (
+          <div className="space-y-4 text-sm text-slate-600">
+            <p className="text-slate-500">
+              Skills radar values are generated from persona data. Manual edit UI is not yet implemented in this sheet.
+            </p>
+            <p className="text-slate-500">
+              Consider regenerating this section after updating goals, tools, or behaviors.
+            </p>
+          </div>
+        );
+
       case "bio":
         return (
           <div className="space-y-5">

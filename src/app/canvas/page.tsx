@@ -359,15 +359,15 @@ function CanvasContent({
     const onConnect = useCallback(
         (params: Connection) => {
             const newEdge: Edge = {
-                id: `${params.source}-${params.target}`,
-                source: params.source!,
-                target: params.target!,
-                sourceHandle: params.sourceHandle,
-                targetHandle: params.targetHandle,
-                type: 'smoothstep',
+                id: `${params.source ?? ""}-${params.target ?? ""}`,
+                source: params.source ?? "",
+                target: params.target ?? "",
+                sourceHandle: params.sourceHandle ?? undefined,
+                targetHandle: params.targetHandle ?? undefined,
+                type: "smoothstep",
                 markerEnd: { type: MarkerType.ArrowClosed },
             };
-            setEdges((eds) => addEdge(newEdge, eds));
+            setEdges((eds) => addEdge(newEdge, eds as Edge[]));
         },
         [setEdges]
     );

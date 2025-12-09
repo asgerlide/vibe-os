@@ -24,7 +24,7 @@ export function ScenariosSection({
             onUpdate({
                 scenarios: {
                     ...persona.scenarios,
-                    [field]: value,
+                    [field]: String(value ?? ""),
                 },
             });
         };

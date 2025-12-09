@@ -43,9 +43,9 @@ export function DemographicsSection({ primaryPersona, secondaryPersona, onUpdate
                         onSave={(value) => onUpdate({
                             demographics: {
                                 ...persona.demographics,
-                                location: value,
+                                location: String(value ?? ""),
                             },
-                            location: value,
+                            location: String(value ?? ""),
                         })}
                         placeholder="Location..."
                         className="flex-1"
@@ -58,7 +58,7 @@ export function DemographicsSection({ primaryPersona, secondaryPersona, onUpdate
                         onSave={(value) => onUpdate({
                             demographics: {
                                 ...persona.demographics,
-                                education: value,
+                                education: String(value ?? ""),
                             },
                         })}
                         placeholder="Education level..."
@@ -72,7 +72,7 @@ export function DemographicsSection({ primaryPersona, secondaryPersona, onUpdate
                         onSave={(value) => onUpdate({
                             demographics: {
                                 ...persona.demographics,
-                                income: value,
+                                income: String(value ?? ""),
                             },
                         })}
                         placeholder="Income range..."

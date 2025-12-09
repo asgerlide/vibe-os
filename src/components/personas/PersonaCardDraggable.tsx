@@ -61,7 +61,6 @@ export function PersonaCardDraggable({
         ${isSelected ? "selected" : ""}
       `}
       aria-label={`${persona.name}, ${persona.role}. Press Enter to select or drag to analyze.`}
-      aria-roledescription="draggable persona card"
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();

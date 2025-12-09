@@ -30,7 +30,7 @@ export function PersonasSection({
                     <Quote className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
                     <EditableField
                         value={persona.quote || ""}
-                        onSave={(value) => onUpdate({ quote: value })}
+                        onSave={(value) => onUpdate({ quote: String(value ?? "") })}
                         multiline
                         placeholder="A quote that captures their attitude..."
                         className="flex-1 text-sm italic"
@@ -50,7 +50,7 @@ export function PersonasSection({
                     <div className="flex items-center gap-2 mb-1">
                         <EditableField
                             value={persona.name}
-                            onSave={(value) => onUpdate({ name: value })}
+                            onSave={(value) => onUpdate({ name: String(value ?? "") })}
                             className="flex-1 font-semibold text-lg"
                         />
                         {isPrimary && (
@@ -61,7 +61,7 @@ export function PersonasSection({
                     </div>
                     <EditableField
                         value={persona.role}
-                        onSave={(value) => onUpdate({ role: value })}
+                        onSave={(value) => onUpdate({ role: String(value ?? "") })}
                         className="text-sm text-zinc-600 dark:text-zinc-400"
                     />
                 </div>
@@ -73,7 +73,7 @@ export function PersonasSection({
                     <FileText className="w-4 h-4 text-zinc-400 mt-1 flex-shrink-0" />
                     <EditableField
                         value={persona.background || ""}
-                        onSave={(value) => onUpdate({ background: value })}
+                        onSave={(value) => onUpdate({ background: String(value ?? "") })}
                         multiline
                         placeholder="Background and context about this persona..."
                         className="flex-1 text-sm"
@@ -87,7 +87,7 @@ export function PersonasSection({
                     <User className="w-4 h-4 text-zinc-400" />
                     <EditableField
                         value={persona.age}
-                        onSave={(value) => onUpdate({ age: value })}
+                        onSave={(value) => onUpdate({ age: Number(value ?? 0) })}
                         type="number"
                         label="Age"
                     />
@@ -96,7 +96,7 @@ export function PersonasSection({
                     <Briefcase className="w-4 h-4 text-zinc-400" />
                     <EditableField
                         value={persona.occupation}
-                        onSave={(value) => onUpdate({ occupation: value })}
+                        onSave={(value) => onUpdate({ occupation: String(value ?? "") })}
                         label="Occupation"
                     />
                 </div>
@@ -126,7 +126,7 @@ export function PersonasSection({
                         <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1 block">Primary Goal</span>
                         <EditableField
                             value={persona.goal}
-                            onSave={(value) => onUpdate({ goal: value })}
+                            onSave={(value) => onUpdate({ goal: String(value ?? "") })}
                             multiline
                             placeholder="What is their main goal?"
                             className="flex-1"

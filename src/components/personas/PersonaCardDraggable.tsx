@@ -60,7 +60,6 @@ export function PersonaCardDraggable({
         ${isDragging ? "opacity-90 shadow-2xl scale-105 rotate-2" : ""}
         ${isSelected ? "selected" : ""}
       `}
-      role="button"
       tabIndex={0}
       aria-label={`${persona.name}, ${persona.role}. Press Enter to select or drag to analyze.`}
       aria-roledescription="draggable persona card"

@@ -133,7 +133,7 @@ export function ContextEnvironmentSection({
                             onSave={(value) => onUpdate({
                                 environment: {
                                     ...persona.environment,
-                                    social: value,
+                                    social: String(value ?? ""),
                                 },
                             })}
                             multiline

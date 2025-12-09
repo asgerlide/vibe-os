@@ -5,6 +5,20 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { motion } from "framer-motion";
 
 export default function DashboardPage() {
+    // Show all sections as active for the dashboard shell
+    const activatedNodes = new Set([
+        "root",
+        "child-1",
+        "child-2",
+        "valueProp",
+        "features",
+        "child-3",
+        "architecture",
+        "naming",
+        "uiux",
+        "output",
+    ]);
+
     return (
         <motion.div
             initial={{ x: "100%", opacity: 0 }}
@@ -15,7 +29,7 @@ export default function DashboardPage() {
         >
             <TopBar />
             <div className="flex flex-1 overflow-hidden">
-                <Sidebar />
+                <Sidebar activatedNodes={activatedNodes} />
                 <div className="relative flex-1 overflow-hidden">
                     {/* Dashboard content will go here */}
                     <div className="flex h-full w-full items-center justify-center">

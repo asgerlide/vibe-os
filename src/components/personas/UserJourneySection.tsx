@@ -79,12 +79,12 @@ export function UserJourneySection({ journey, onUpdate }: UserJourneySectionProp
                                     <div className="flex-1">
                                         <EditableField
                                             value={stage.name}
-                                            onSave={(value) => updateStage(stage.id, "name", value)}
+                                            onSave={(value) => updateStage(stage.id, "name", String(value ?? ""))}
                                             className="font-semibold text-lg mb-2"
                                         />
                                         <EditableField
                                             value={stage.description}
-                                            onSave={(value) => updateStage(stage.id, "description", value)}
+                                            onSave={(value) => updateStage(stage.id, "description", String(value ?? ""))}
                                             multiline
                                             placeholder="Stage description..."
                                             className="text-sm text-zinc-600 dark:text-zinc-400"
@@ -121,7 +121,7 @@ export function UserJourneySection({ journey, onUpdate }: UserJourneySectionProp
                                             <ArrowRight className="w-3 h-3 text-zinc-400" />
                                             <EditableField
                                                 value={touchpoint}
-                                                onSave={(value) => updateTouchpoint(stage.id, tpIndex, value)}
+                                                onSave={(value) => updateTouchpoint(stage.id, tpIndex, String(value ?? ""))}
                                                 className="flex-1 text-sm"
                                             />
                                             <button

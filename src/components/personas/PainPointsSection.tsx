@@ -66,7 +66,7 @@ export function PainPointsSection({ painPoints, onUpdate }: PainPointsSectionPro
                         <div className="flex-1">
                             <EditableField
                                 value={painPoint.description}
-                                onSave={(value) => updatePainPoint(painPoint.id, "description", value)}
+                                onSave={(value) => updatePainPoint(painPoint.id, "description", String(value ?? ""))}
                                 multiline
                                 className="mb-2"
                             />

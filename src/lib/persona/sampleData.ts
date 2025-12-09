@@ -1,0 +1,291 @@
+import { Persona } from "./types";
+
+export const samplePersonas: Persona[] = [
+  {
+    id: "persona-sarah",
+    type: "Primary",
+    name: "Sarah Chen",
+    role: "Sr Product Manager",
+    age: 34,
+    ageRange: "30-39",
+    incomeRange: "$120k-$180k",
+    company: "Nexus Labs",
+    industry: "B2B SaaS",
+    location: "San Francisco, CA",
+    experienceLevel: "expert",
+    techProficiency: "high",
+    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+    matchScore: 92,
+    bio: "Sarah leads product strategy at a fast-growing B2B SaaS startup. With 8 years of PM experience, she bridges the gap between engineering and business, advocating for user-centric design while keeping stakeholders aligned.",
+    quickFacts: [
+      "8+ years PM",
+      "Data-driven",
+      "Cross-functional",
+    ],
+    // NEW: Goal → Pain Point → Solution connections
+    goalPainSolutions: [
+      {
+        id: "gps-1",
+        goal: {
+          text: "Reduce feature delivery time by 40%",
+          metric: "Sprint velocity",
+        },
+        painPoints: [
+          { id: "pp-1a", text: "Context switching between 7+ tools daily", severity: "high" },
+          { id: "pp-1b", text: "No single source of truth for decisions", severity: "high" },
+        ],
+        solution: {
+          text: "Unified workspace with integrated tooling",
+          feature: "All-in-one dashboard",
+        },
+      },
+      {
+        id: "gps-2",
+        goal: {
+          text: "Improve cross-team collaboration",
+          metric: "Team satisfaction score",
+        },
+        painPoints: [
+          { id: "pp-2a", text: "Stakeholder meetings consume 30% of week", severity: "high" },
+          { id: "pp-2b", text: "Feedback loops with customers too slow", severity: "medium" },
+        ],
+        solution: {
+          text: "Async collaboration with real-time sync",
+          feature: "Shared workspaces & comments",
+        },
+      },
+      {
+        id: "gps-3",
+        goal: {
+          text: "Ship MVP for new vertical in Q2",
+          metric: "Launch date",
+        },
+        painPoints: [
+          { id: "pp-3a", text: "Analytics scattered across platforms", severity: "medium" },
+        ],
+        solution: {
+          text: "Centralized analytics and progress tracking",
+          feature: "Built-in metrics dashboard",
+        },
+      },
+    ],
+    // NEW: Skills for radar chart
+    skills: [
+      { skill: "Strategic Thinking", level: 90 },
+      { skill: "Technical Acumen", level: 75 },
+      { skill: "Communication", level: 85 },
+      { skill: "Problem Solving", level: 88 },
+      { skill: "Budget Management", level: 70 },
+      { skill: "Change Management", level: 82 },
+    ],
+    // NEW: Engagement data for charts
+    engagementData: [
+      { label: "Week 1", value: 45 },
+      { label: "Week 2", value: 52 },
+      { label: "Week 3", value: 48 },
+      { label: "Week 4", value: 70 },
+      { label: "Week 5", value: 65 },
+      { label: "Week 6", value: 85 },
+      { label: "Week 7", value: 78 },
+      { label: "Week 8", value: 92 },
+    ],
+    journey: [
+      { id: "j1", title: "Problem Discovery", status: "completed", note: "Identified workflow bottlenecks" },
+      { id: "j2", title: "Solution Research", status: "completed", note: "Evaluated 12 tools" },
+      { id: "j3", title: "Stakeholder Buy-in", status: "completed", note: "ROI analysis presented" },
+      { id: "j4", title: "Pilot Program", status: "active", note: "30-day trial with core team" },
+      { id: "j5", title: "Full Rollout", status: "pending", note: "Company-wide deployment" },
+    ],
+    goals: [
+      { id: "g1", text: "Reduce feature delivery time by 40%", metric: "Sprint velocity", priority: 1 },
+      { id: "g2", text: "Improve cross-team collaboration", metric: "Team satisfaction score", priority: 1 },
+      { id: "g3", text: "Build a scalable product process", metric: "Process documentation coverage", priority: 2 },
+      { id: "g4", text: "Increase user retention by 25%", metric: "Monthly active users", priority: 2 },
+      { id: "g5", text: "Ship MVP for new vertical in Q2", metric: "Launch date", priority: 1 },
+    ],
+    painPoints: [
+      { id: "pp1", category: "process", text: "Context switching between 7+ tools daily kills productivity", severity: "high" },
+      { id: "pp2", category: "tooling", text: "No single source of truth for product decisions", severity: "high" },
+      { id: "pp3", category: "functional", text: "Feedback loops with customers are too slow", severity: "medium" },
+      { id: "pp4", category: "emotional", text: "Burnout from constant firefighting instead of strategic work", severity: "medium" },
+      { id: "pp5", category: "process", text: "Stakeholder alignment meetings consume 30% of week", severity: "high" },
+      { id: "pp6", category: "tooling", text: "Analytics scattered across multiple platforms", severity: "medium" },
+    ],
+    behaviors: [
+      "Starts day with standup and priority review",
+      "Blocks 2-hour focus time for deep work",
+      "Documents decisions in shared spaces",
+      "Runs weekly 1:1s with all direct reports",
+      "Reviews metrics dashboard every morning",
+      "Prefers async communication over meetings",
+      "Tests new tools on personal projects first",
+    ],
+    tools: [
+      { id: "t1", name: "Linear", purpose: "Issue tracking" },
+      { id: "t2", name: "Notion", purpose: "Documentation" },
+      { id: "t3", name: "Figma", purpose: "Design collaboration" },
+      { id: "t4", name: "Slack", purpose: "Team communication" },
+      { id: "t5", name: "Amplitude", purpose: "Product analytics" },
+      { id: "t6", name: "Loom", purpose: "Async video updates" },
+    ],
+    jtbds: [
+      { id: "jtbd1", kind: "functional", title: "Prioritize features objectively", detail: "When I have competing stakeholder requests, I need a framework to prioritize based on impact and effort" },
+      { id: "jtbd2", kind: "functional", title: "Track progress across teams", detail: "When engineering is working on multiple initiatives, I need visibility into progress" },
+      { id: "jtbd3", kind: "emotional", title: "Feel confident in decisions", detail: "When presenting to leadership, I want to feel confident that my recommendations are data-backed" },
+      { id: "jtbd4", kind: "social", title: "Build trust with engineering", detail: "When working with dev teams, I want to demonstrate I understand technical constraints" },
+    ],
+    needsMap: [
+      { need: "Single source of truth for roadmap", solution: "Centralized product management platform" },
+      { need: "Faster feedback from users", solution: "In-app feedback collection" },
+      { need: "Better async collaboration", solution: "Integrated documentation and communication" },
+      { need: "Data-driven prioritization", solution: "Impact/effort scoring with historical data" },
+    ],
+    triggers: [
+      { id: "tr1", text: "Missed deadline due to miscommunication" },
+      { id: "tr2", text: "Stakeholder asks 'what's the status?' repeatedly" },
+      { id: "tr3", text: "Team velocity drops for 2 consecutive sprints" },
+      { id: "tr4", text: "Customer churn increases unexpectedly" },
+    ],
+    constraints: [
+      { id: "c1", text: "Budget approval needed for tools over $500/mo" },
+      { id: "c2", text: "Security review required for new SaaS tools" },
+      { id: "c3", text: "Must integrate with existing Jira setup" },
+      { id: "c4", text: "Team resistant to tool migration" },
+    ],
+    scenarios: [
+      { id: "s1", title: "Sprint Planning Monday", description: "Reviews backlog, meets with engineering leads to scope work", outcome: "positive" },
+      { id: "s2", title: "Stakeholder Escalation", description: "CEO asks why Feature X isn't shipped yet", outcome: "neutral" },
+      { id: "s3", title: "Customer Discovery Call", description: "Captures insights and tags them to relevant features", outcome: "positive" },
+    ],
+  },
+  {
+    id: "persona-leo",
+    type: "Secondary",
+    name: "Leo Martínez",
+    role: "Indie Builder",
+    age: 29,
+    ageRange: "25-34",
+    incomeRange: "$60k-$100k",
+    company: "Self-employed",
+    industry: "Creator Economy",
+    location: "Austin, TX",
+    experienceLevel: "intermediate",
+    techProficiency: "high",
+    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    matchScore: 78,
+    bio: "Leo is a solopreneur building micro-SaaS products. After 4 years as a full-stack developer, he went indie to pursue his own ideas. He ships fast, learns from users, and iterates quickly.",
+    quickFacts: [
+      "Full-stack dev",
+      "Ships weekly",
+      "Bootstrapped",
+    ],
+    goalPainSolutions: [
+      {
+        id: "gps-1",
+        goal: {
+          text: "Reach $5k MRR by end of year",
+          metric: "Monthly recurring revenue",
+        },
+        painPoints: [
+          { id: "pp-1a", text: "No dedicated time for marketing", severity: "high" },
+          { id: "pp-1b", text: "User feedback scattered across channels", severity: "high" },
+        ],
+        solution: {
+          text: "Automated marketing workflows + unified inbox",
+          feature: "Marketing automation",
+        },
+      },
+      {
+        id: "gps-2",
+        goal: {
+          text: "Ship one feature per week",
+          metric: "Weekly releases",
+        },
+        painPoints: [
+          { id: "pp-2a", text: "Hard to prioritize when everything feels important", severity: "high" },
+        ],
+        solution: {
+          text: "AI-powered prioritization based on user signals",
+          feature: "Smart backlog",
+        },
+      },
+    ],
+    skills: [
+      { skill: "Frontend Dev", level: 92 },
+      { skill: "Backend Dev", level: 88 },
+      { skill: "Marketing", level: 45 },
+      { skill: "Design", level: 70 },
+      { skill: "Customer Support", level: 75 },
+      { skill: "Analytics", level: 65 },
+    ],
+    engagementData: [
+      { label: "Week 1", value: 30 },
+      { label: "Week 2", value: 45 },
+      { label: "Week 3", value: 55 },
+      { label: "Week 4", value: 50 },
+      { label: "Week 5", value: 68 },
+      { label: "Week 6", value: 72 },
+      { label: "Week 7", value: 80 },
+      { label: "Week 8", value: 75 },
+    ],
+    journey: [
+      { id: "j1", title: "Idea Validation", status: "completed", note: "Validated through Twitter polls" },
+      { id: "j2", title: "MVP Build", status: "completed", note: "Shipped in 3 weeks" },
+      { id: "j3", title: "Early Users", status: "active", note: "Onboarding first 50 beta users" },
+      { id: "j4", title: "Product-Market Fit", status: "pending", note: "Iterating based on feedback" },
+      { id: "j5", title: "Scale & Grow", status: "pending", note: "Focus on acquisition" },
+    ],
+    goals: [
+      { id: "g1", text: "Reach $5k MRR by end of year", metric: "Monthly recurring revenue", priority: 1 },
+      { id: "g2", text: "Build in public to grow audience", metric: "Twitter followers", priority: 2 },
+      { id: "g3", text: "Ship one feature per week", metric: "Weekly releases", priority: 1 },
+      { id: "g4", text: "Reduce support tickets by 50%", metric: "Support volume", priority: 3 },
+    ],
+    painPoints: [
+      { id: "pp1", category: "process", text: "No dedicated time for marketing—always coding", severity: "high" },
+      { id: "pp2", category: "emotional", text: "Isolation of solo work affects motivation", severity: "medium" },
+      { id: "pp3", category: "tooling", text: "Paying for too many overlapping subscriptions", severity: "medium" },
+      { id: "pp4", category: "functional", text: "Hard to prioritize when everything feels important", severity: "high" },
+      { id: "pp5", category: "process", text: "User feedback scattered across email, Twitter, Discord", severity: "high" },
+    ],
+    behaviors: [
+      "Ships updates every Friday",
+      "Shares progress on Twitter daily",
+      "Responds to every user personally",
+      "Uses own products for internal needs",
+      "Batches similar tasks together",
+      "Takes walks to think through problems",
+    ],
+    tools: [
+      { id: "t1", name: "VS Code", purpose: "Development" },
+      { id: "t2", name: "Vercel", purpose: "Deployment" },
+      { id: "t3", name: "Supabase", purpose: "Backend" },
+      { id: "t4", name: "Stripe", purpose: "Payments" },
+      { id: "t5", name: "Crisp", purpose: "Support chat" },
+    ],
+    jtbds: [
+      { id: "jtbd1", kind: "functional", title: "Ship features faster", detail: "When I have a new idea, I want to go from concept to deployed feature in days" },
+      { id: "jtbd2", kind: "emotional", title: "Feel less overwhelmed", detail: "When juggling multiple responsibilities, I want a clear system for what to work on" },
+      { id: "jtbd3", kind: "social", title: "Build a loyal community", detail: "When users give feedback, I want to show them their input matters" },
+    ],
+    needsMap: [
+      { need: "All-in-one workspace", solution: "Unified tool for planning, feedback, and shipping" },
+      { need: "Automated busywork", solution: "Templates and workflows for repetitive tasks" },
+      { need: "User insight aggregation", solution: "Central inbox for all feedback channels" },
+    ],
+    triggers: [
+      { id: "tr1", text: "User cancels subscription" },
+      { id: "tr2", text: "Feature request comes in 3+ times" },
+      { id: "tr3", text: "Competitor launches something similar" },
+    ],
+    constraints: [
+      { id: "c1", text: "Solo operator—limited time and bandwidth" },
+      { id: "c2", text: "Bootstrapped—strict budget consciousness" },
+      { id: "c3", text: "Must work with existing tech stack" },
+    ],
+    scenarios: [
+      { id: "s1", title: "Ship It Friday", description: "Deploys new feature, writes changelog, shares on Twitter", outcome: "positive" },
+      { id: "s2", title: "Support Overload", description: "After feature launch, support requests spike", outcome: "negative" },
+    ],
+  },
+];
